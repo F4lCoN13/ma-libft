@@ -116,6 +116,9 @@ $(NAME): $(OBJS)
 	 $(AR) $(NAME) $(OBJS)
 	 $(RAN) $(NAME)
 	 @echo "\n				        $(LIGHT_GREEN)UPDATE  PRINTF       ...$(END)\n"
+	 @echo "\n						$(LIGHT_GREEN)... $(END)"
+	 @echo "\n				        $(LIGHT_GREEN)UPDATE  PRINTF       ...$(END)\n"
+	 @echo "\n						$(LIGHT_GREEN)... $(END)"
 	 @echo "\n				        $(LIGHT_GREEN)UPDATE GET_NEXT_LINE ...$(END)\n"
 	 @echo "$(LIGHT_RED)         __      __        .__  $(LIGHT_YELLOW).__              $(LIGHT_GREEN).__          $(LIGHT_BLUE)           ._.$(LIGHT_PURPLE)_._.	$(END)"
 	 @echo "$(LIGHT_RED)        /  \    /  \ ____  |  | $(LIGHT_YELLOW)|  |     ______  $(LIGHT_GREEN)|  | _____  $(LIGHT_BLUE) ___.__.   | |$(LIGHT_PURPLE) | |	$(END)"
@@ -140,12 +143,15 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER)
 
 clean:
 	@rm -rf $(OBJ_DIR)
+	@echo "\n					$(RED)DELETION .o LIBFT         ... $(END)"
+	@echo "\n					$(RED)	... $(END)"
 	@echo "\n					$(RED)DELETION .o PRINTF        ... $(END)"
 	@echo "\n					$(RED)	... $(END)"
 	@echo "\n					$(RED)DELETION .o GET_NEXT_LINE ... $(END)"
 
 fclean: clean
 	@rm -f $(NAME)
+	@echo "\n					$(RED)	... $(END)"
 	@echo "\n					$(RED)DELETION PRINTF.A    ... $(END)"
 
 re: fclean all
